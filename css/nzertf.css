@@ -1,6 +1,21 @@
 
 body {
     font-family: "HelveticaNeue-Light";
+    position: relative;
+}
+
+ul.nav-class {
+  position: fixed;
+}
+
+#side-nav > ul {
+  overflow-y: auto;
+  height: 300;
+}
+
+.content_stuff {
+  /*height: 1000px;*/
+  overflow-y: scroll;
 }
 
 .codie {
@@ -123,24 +138,23 @@ li.dropdown {
 
 /* SIDE BAR  */
     .group{
-    /*  background: yellow;
-     /* width: 200px;*/
      padding-bottom: 50px;
     }
 
     .group .subgroup {
-      padding-top: 60px;
-      margin-top: -60px;
+      padding-top: 15px;
+      overflow: hidden;
     }
 
     .content-row {
-      margin-top: 60px;
+      margin-top: 70px;
+      position: relative;
     }
 
     .fixed {
       position: fixed;
       /*padding-top: 60px;*/
-      width: 300px;
+      width: 325px;
     }
 
     .sidenav-padding{
@@ -152,7 +166,7 @@ li.dropdown {
     .sidenav-padding .nav>li>a {
       color: #777;
       padding: 4px 20px;
-      font-size: 18px;
+      font-size: 16px;
       font-weight: 400;
       text-align: right;
     }
@@ -161,27 +175,37 @@ li.dropdown {
       padding-top: 4px;
       padding-bottom: 4px;
       padding-left: 30px;
-      font-size: 16px;
-    }
-
-    .sidenav-padding .nav>.active>a {
-      color: red;
+      font-size: 14px;
     }
 
     /* all links */
     .sidenav-padding .nav>li>a {
-        /*add trasnparent border */
-        border-left: 2px solid transparent;
+    /*add trasnparent border */
+    border-left: 2px solid transparent;
     }
+
     /* active & hover links */
-    .sidenav-padding .nav>.active>a, 
+    .sidenav-padding .nav>a, 
     .sidenav-padding .nav>li>a:hover, 
-    .sidenav-padding .nav>li>a:focus {
-        color: #563d7c;                 
+    .sidenav-padding .nav>li>a:focus {               
+        font-weight: bold;
         text-decoration: none;          
-        background-color: transparent;  
-        border-right: 2px solid #563d7c; 
+        color: rgba(38,89,148,.9);  
+        background-color: white;
+        border-right: 2px solid rgba(38,89,148,.9);
     }
+
+    .sidenav-padding .nav>.active>a, 
+    .sidenav-padding .nav>.active>li>a:hover, 
+    .sidenav-padding .nav>.active>li>a:focus {               
+        font-weight: bold;
+        text-decoration: none;          
+        color: rgba(38,89,148,.9);  
+        background-color: white;
+        border-right: 2px solid rgba(38,89,148,.9);
+    }
+
+
 
   pre {
    white-space: pre-wrap;       /* css-3 */
