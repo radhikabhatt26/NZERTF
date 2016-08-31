@@ -1,19 +1,14 @@
+<!DOCTYPE html>
 <html>
 
 <head>
+    <meta charset="utf-8">
+    <title>NIST NetZero Homepage</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-    <link href="css/nzertf.css" rel="stylesheet">
-    <link href="css/cursor.css" rel="stylesheet">
+    
+    <link href="css/cursor.css" rel="stylesheet" type="text/css">
     <link href='https://fonts.googleapis.com/css?family=Coda:400,800' rel='stylesheet' type='text/css'>
-
-    <!--graphs-->
-    <script src="http://d3js.org/d3.v3.min.js"></script>
-    <script src="http://dimplejs.org/dist/dimple.v2.1.6.min.js"></script>
-    <script src="http://dygraphs.com/dygraph-combined.js"></script>
-    <!--Dropdowns-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="js/nzertf.js"></script>
+    <link href="css/nzertf.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
@@ -31,17 +26,23 @@
             </div>
             <div class="collapse navbar-collapse parentMenu">
                 <ul class="nav navbar-nav">
-                    <li><a data-toggle="collapse" data-target=".navbar-collapse1" href="#">Research</a></li>
-                    <li class="dropdown"><a class="dropbtn" href="#">Data  <span class="caret"></span></a>
+                    <li><a href="http://www.nist.gov/el/nzertf/rrr.cfm" target="blank">Research</a></li>
+                    <li class="dropdown"><a class="dropbtn" href="data.html">Data  <span class="caret"></span></a>
                        <div class="dropdown-content">
-                            <a href="#">Download Data</a>
-                            <a href="#">Data Dictionary</a>
-                            <a href="#">Log of Revisions</a>
-                            <a href="#">FAQ &amp;<br> Known Data Issues</a>
+                            <a href="data.html#download_data">Download Data</a>
+                            <a href="data.html#data_dictionary">Data Dictionary</a>
+                            <a href="data.html#log_revisions">Log of Revisions</a>
+                            <a href="data.html#data_faq">FAQ &amp;<br> Known Data Issues</a>
                         </div> 
                     </li>
-                    <li><a data-toggle="collapse" data-target=".navbar-collapse1" href="learn.html">Learn</a></li>
-                    <li><a data-toggle="collapse" data-target=".navbar-collapse1" href="#">About EL</a></li>
+                    <li class="dropdown"><a class="dropbtn" href="learn.html">Learn  <span class="caret"></span></a>
+                     <div class="dropdown-content">
+                            <a href="learn.html#Data-From-Subsystem">Work with Data from a Subsystem</a>
+                            <a href="learn.html#Data-By-Timestamp">Extract Data by Timestamp</a>
+                            <a href="learn.html#Visualize-Power-Usage">Visualize Aggregate Power Usage</a>
+                        </div>
+                    </li> 
+                    <li><a href="#">About EL</a></li>
                 </ul>
             </div>
             <div class="collapse navbar-collapse1 childMenu">
@@ -65,11 +66,10 @@
                     <li><a href="#contact">Contact3</a></li>
                 </ul>
             </div>
-            <!--/.nav-collapse -->
+           <!-- /.nav-collapse -->
         </div>
     </div>
   </header>
-  <main>
     <!--BANNER SECTION-->
     <section class="scroll" >
          <div  class="scroll-overlay " >
@@ -92,22 +92,22 @@
             <div class="row" style="text-align:center">
                 <div class="col-lg-3 col-md-3 col-sm-3 hidden-xs"> </div>
                 <div class="col-lg-2 col-md-2 col-sm-2 codie leftie">
-                    <hr width="10%" size="30" align="left">               
-                    <a style="color:white" href="#">
+                    <hr width="10%" size="30" align="left">
+                    <a style="color:white" href="http://www.nist.gov/el/nzertf/rrr.cfm" target="blank">
                         <h3 class="codie">Research ></h3>
                         <h4 class="slightgrey">Read about the latest net zero research  </h4>
                     </a>
                 </div>
                 <div class="col-lg-2 col-md-2 col-sm-2 codie leftie">
                     <hr width="10%" height="30px" align="left">
-                    <a style="color:white" href="#">
+                    <a style="color:white" href="data.html">
                         <h3 class="codie">Data ></h3>
                         <h4 class="slightgrey">Find research-grade <br>instrumented energy data</h4>
                     </a>
                 </div>
                 <div class="col-lg-2 col-md-2 col-sm-2 codie leftie">
                     <hr width="10%" size="30" align="left">
-                    <a style="color:white" href="#">
+                    <a style="color:white" href="learn.html">
                         <h3 class="codie">Learn ></h3>
                         <h4 class="slightgrey">Learn how to get started, now.</h4>
                     </a>
@@ -117,7 +117,12 @@
 
         </div>
     </section>
-  </main>
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/nzertf.js"></script>
+
 </body>
 
 </html>
