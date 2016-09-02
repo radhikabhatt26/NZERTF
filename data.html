@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>NIST NetZero Data Page</title>
 	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css">
@@ -70,10 +71,11 @@
         </div>
     </header>
 
-    <!-- THIS IS THE SIDEBAR -->
-    <div class="row content-row">
-    	<nav class="col-xs-3 sidenav-padding" id="side-nav">
-            <ul id="sidebar" class="nav nav-stacked nav-class">
+<div class="container">
+    <div class="row content-row row-offcanvas row-offcanvas-left">
+    <!-- SIDE NAVBAR -->
+        <nav class="col-xs-6 col-sm-3 sidebar-offcanvas sidenav-padding" id="side-nav">
+            <ul id="sidebar" class="nav nav-stacked fixed">
                 <li><a href="#download_data">Download Data</a></li>
                 <li><a href="#data_dictionary">Data Dictionary</a></li>
                 <li><a href="#log_revisions">Log of Revisions</a></li>
@@ -82,12 +84,12 @@
         </nav>
     
 
-    <!-- THIS IS THE CONTENT -->
-    	<div id="data_content" class="col-xs-8">
+    <!-- CONTENT SECTION -->
+    	<div id="data_content" class="col-xs-12 col-sm-9">
 	    	<div id="download_data">
 				<h2>Subsystem Data Downloads</h2>
 				
-				<table class="download_data_table" id="download_table">
+				<table class="table table-striped download_data_table" id="download_table">
 					<thead>
 						<tr class="data_download_headers">
 							<th>Subsystem Abbreviation</th>
@@ -104,25 +106,19 @@
 							<td class="download_button">
 								<a href="https://s3.amazonaws.com/net-zero/2015-data-files/DHW.csv"><div class="button_div">Download</div></a>								
 							</td>
-							<td>
-								<div class="clipboard_icon" data-toggle="popover" data-placement="left" data-content="https://s3.amazonaws.com/net-zero/2015-data-files/DHW.csv"><i class="fa fa-clipboard fa-2x" aria-hidden="true" id="DHW"></i></div>								
+							<td>		
+								<a tabindex="0" class="clipboard_icon" role="button" data-toggle="popover" data-placement="left" data-trigger="focus" data-content="https://s3.amazonaws.com/net-zero/2015-data-files/DHW.csv"><i class="fa fa-clipboard fa-2x" aria-hidden="true"></i></a>						
 							</td>							
-						</tr> 
-
-<!-- 						<tr class="DHW link_div">
-							<td colspan="4">https://s3.amazonaws.com/net-zero/2015-data-files/DHW.csv</td>
-							<td style="display:none"></td>
-							<td style="display:none"></td>
-							<td style="display:none"></td>
-						</tr>   -->		
+						</tr> 	
 
 						<tr>
 							<td>SHW</td>
 							<td>Solar Hot Water</td>
 							<td class="download_button">
 								<a href=" https://s3.amazonaws.com/net-zero/2015-data-files/SHW.csv"><div class="button_div">Download</div></a>
+							</td>
 							<td>
-								<div class="clipboard_icon" data-toggle="popover" data-placement="left" data-content="https://s3.amazonaws.com/net-zero/2015-data-files/SHW.csv"><i class="fa fa-clipboard fa-2x" aria-hidden="true" id="SHW"></i></div>
+								<a tabindex="0" class="clipboard_icon" role="button" data-toggle="popover" data-placement="left" data-trigger="focus" data-content="https://s3.amazonaws.com/net-zero/2015-data-files/SHW.csv"><i class="fa fa-clipboard fa-2x" aria-hidden="true"></i></a>
 							</td>
 						</tr>
 
@@ -134,7 +130,7 @@
 							</td>
 
 							<td>
-								<div class="clipboard_icon" data-toggle="popover" data-placement="left" data-content="https://s3.amazonaws.com/net-zero/2015-data-files/Loads.csv"><i class="fa fa-clipboard fa-2x" aria-hidden="true" id="Loads"></i></div>
+								<a tabindex="0" class="clipboard_icon" role="button" data-toggle="popover" data-placement="left" data-trigger="focus" data-content="https://s3.amazonaws.com/net-zero/2015-data-files/Loads.csv"><i class="fa fa-clipboard fa-2x" aria-hidden="true"></i></a>
 							</td>
 						</tr>
 
@@ -147,7 +143,7 @@
 							</td>
 
 							<td>
-								<div class="clipboard_icon" data-toggle="popover" data-placement="left" data-content="https://s3.amazonaws.com/net-zero/2015-data-files/Load.csv"><i class="fa fa-clipboard fa-2x" aria-hidden="true" id="Load"></i></div>
+								<a tabindex="0" class="clipboard_icon" role="button" data-toggle="popover" data-placement="left" data-trigger="focus" data-content="https://s3.amazonaws.com/net-zero/2015-data-files/Load.csv"><i class="fa fa-clipboard fa-2x" aria-hidden="true"></i></a>
 							</td>
 						</tr>
 
@@ -159,7 +155,7 @@
 							</td>
 
 							<td>
-								<div class="clipboard_icon" data-toggle="popover" data-placement="left" data-content="https://s3.amazonaws.com/net-zero/2015-data-files/HVAC.csv"><i class="fa fa-clipboard fa-2x" aria-hidden="true" id="HVAC"></i></div>
+								<a tabindex="0" class="clipboard_icon" role="button" data-toggle="popover" data-placement="left" data-trigger="focus" data-content="https://s3.amazonaws.com/net-zero/2015-data-files/HVAC.csv"><i class="fa fa-clipboard fa-2x" aria-hidden="true"></i></a>
 							</td>
 						</tr>
 
@@ -171,7 +167,7 @@
 							</td>
 
 							<td>
-								<div class="clipboard_icon" data-toggle="popover" data-placement="left" data-content="https://s3.amazonaws.com/net-zero/2015-data-files/IndEnv.csv"><i class="fa fa-clipboard fa-2x" aria-hidden="true" id="IndEnv"></i></div>
+								<a tabindex="0" class="clipboard_icon" role="button" data-toggle="popover" data-placement="left" data-trigger="focus" data-content="https://s3.amazonaws.com/net-zero/2015-data-files/IndEnv.csv"><i class="fa fa-clipboard fa-2x" aria-hidden="true"></i></a>
 							</td>
 						</tr>
 
@@ -183,7 +179,7 @@
 							</td>
 
 							<td>
-								<div class="clipboard_icon" data-toggle="popover" data-placement="left" data-content="https://s3.amazonaws.com/net-zero/2015-data-files/PV.csv"><i class="fa fa-clipboard fa-2x" aria-hidden="true" id="PV"></i></div>
+								<a tabindex="0" class="clipboard_icon" role="button" data-toggle="popover" data-placement="left" data-trigger="focus" data-content="https://s3.amazonaws.com/net-zero/2015-data-files/PV.csv"><i class="fa fa-clipboard fa-2x" aria-hidden="true"></i></a>
 							</td>
 						</tr>
 
@@ -196,7 +192,7 @@
 							</td>
 
 							<td>
-								<div class="clipboard_icon" data-toggle="popover" data-placement="left" data-content="https://s3.amazonaws.com/net-zero/2015-data-files/OutEnv.csv"><i class="fa fa-clipboard fa-2x" aria-hidden="true" id="OutEnv"></i></div>
+								<a tabindex="0" class="clipboard_icon" role="button" data-toggle="popover" data-placement="left" data-trigger="focus" data-content="https://s3.amazonaws.com/net-zero/2015-data-files/OutEnv.csv"><i class="fa fa-clipboard fa-2x" aria-hidden="true"></i></a>
 							</td>
 						</tr>
 
@@ -208,7 +204,7 @@
 							</td>
 
 							<td>
-								<div class="clipboard_icon" data-toggle="popover" data-placement="left" data-content="https://s3.amazonaws.com/net-zero/2015-data-files/Ventilation.csv"><i class="fa fa-clipboard fa-2x" aria-hidden="true" id="Ventilation"></i></div>
+								<a tabindex="0" class="clipboard_icon" role="button" data-toggle="popover" data-placement="left" data-trigger="focus" data-content="https://s3.amazonaws.com/net-zero/2015-data-files/Ventilation.csv"><i class="fa fa-clipboard fa-2x" aria-hidden="true"></i></a>
 							</td>
 						</tr>
 
@@ -220,7 +216,7 @@
 							</td>
 
 							<td>
-								<div class="clipboard_icon" data-toggle="popover" data-placement="left" data-content="https://s3.amazonaws.com/net-zero/2015-data-files/Vent.csv"><i class="fa fa-clipboard fa-2x" aria-hidden="true" id="Vent"></i></div>
+								<a tabindex="0" class="clipboard_icon" role="button" data-toggle="popover" data-placement="left" data-trigger="focus" data-content="https://s3.amazonaws.com/net-zero/2015-data-files/Vent.csv"><i class="fa fa-clipboard fa-2x" aria-hidden="true"></i></a>
 							</td>
 						</tr>
 
@@ -232,7 +228,7 @@
 							</td>
 
 							<td>
-								<div class="clipboard_icon" data-toggle="popover" data-placement="left" data-content="https://s3.amazonaws.com/net-zero/2015-data-files/Lighting.csv"><i class="fa fa-clipboard fa-2x" aria-hidden="true" id="Lighting"></i></div>
+								<a tabindex="0" class="clipboard_icon" role="button" data-toggle="popover" data-placement="left" data-trigger="focus" data-content="https://s3.amazonaws.com/net-zero/2015-data-files/Lighting.csv"><i class="fa fa-clipboard fa-2x" aria-hidden="true"></i></a>
 							</td>
 						</tr>
 
@@ -244,7 +240,7 @@
 							</td>
 
 							<td>
-								<div class="clipboard_icon" data-toggle="popover" data-placement="left" data-content="https://s3.amazonaws.com/net-zero/2015-data-files/Electrical.csv"><i class="fa fa-clipboard fa-2x" aria-hidden="true" id="Electrical"></i></div>
+								<a tabindex="0" class="clipboard_icon" role="button" data-toggle="popover" data-placement="left" data-trigger="focus" data-content="https://s3.amazonaws.com/net-zero/2015-data-files/Electrical.csv"><i class="fa fa-clipboard fa-2x" aria-hidden="true"></i></a>
 							</td>
 						</tr>
 
@@ -256,7 +252,7 @@
 							</td>
 
 							<td>
-								<div class="clipboard_icon" data-toggle="popover" data-placement="left" data-content="https://s3.amazonaws.com/net-zero/2015-data-files/ElecCurrent.csv"><i class="fa fa-clipboard fa-2x" aria-hidden="true" id="ElecCurrent"></i></div>
+								<a tabindex="0" class="clipboard_icon" role="button" data-toggle="popover" data-placement="left" data-trigger="focus" data-content="https://s3.amazonaws.com/net-zero/2015-data-files/ElecCurrent.csv"><i class="fa fa-clipboard fa-2x" aria-hidden="true"></i></a>
 							</td>
 						</tr>
 
@@ -268,7 +264,7 @@
 							</td>
 
 							<td>
-								<div class="clipboard_icon" data-toggle="popover" data-placement="left" data-content="https://s3.amazonaws.com/net-zero/2015-data-files/ElecEnergy.csv"><i class="fa fa-clipboard fa-2x" aria-hidden="true" id="ElecEnergy"></i></div>
+								<a tabindex="0" class="clipboard_icon" role="button" data-toggle="popover" data-placement="left" data-trigger="focus" data-content="https://s3.amazonaws.com/net-zero/2015-data-files/ElecEnergy.csv"><i class="fa fa-clipboard fa-2x" aria-hidden="true"></i></a>
 							</td>
 						</tr>
 
@@ -280,7 +276,7 @@
 							</td>
 
 							<td>
-								<div class="clipboard_icon" data-toggle="popover" data-placement="left" data-content="https://s3.amazonaws.com/net-zero/2015-data-files/ElecPower.csv"><i class="fa fa-clipboard fa-2x" aria-hidden="true" id="ElecPower"></i></div>
+								<a tabindex="0" class="clipboard_icon" role="button" data-toggle="popover" data-placement="left" data-trigger="focus" data-content="https://s3.amazonaws.com/net-zero/2015-data-files/ElecPower.csv"><i class="fa fa-clipboard fa-2x" aria-hidden="true"></i></a>
 							<td>
 						</tr>
 
@@ -292,7 +288,7 @@
 							</td>
 
 							<td>
-								<div class="clipboard_icon" data-toggle="popover" data-placement="left" data-content="https://s3.amazonaws.com/net-zero/2015-data-files/ElecRPB.csv"><i class="fa fa-clipboard fa-2x" aria-hidden="true" id="ElecRPB"></i></div>
+								<a tabindex="0" class="clipboard_icon" role="button" data-toggle="popover" data-placement="left" data-trigger="focus" data-content="https://s3.amazonaws.com/net-zero/2015-data-files/ElecRPB.csv"><i class="fa fa-clipboard fa-2x" aria-hidden="true"></i></a>
 							</td>
 						</tr>
 
@@ -304,7 +300,7 @@
 							</td>
 
 							<td>
-								<div class="clipboard_icon" data-toggle="popover" data-placement="left" data-content="https://s3.amazonaws.com/net-zero/2015-data-files/ElecTotal.csv"><i class="fa fa-clipboard fa-2x" aria-hidden="true" id="ElecTotal"></i></div>
+								<a tabindex="0" class="clipboard_icon" role="button" data-toggle="popover" data-placement="left" data-trigger="focus" data-content="https://s3.amazonaws.com/net-zero/2015-data-files/ElecTotal.csv"><i class="fa fa-clipboard fa-2x" aria-hidden="true"></i></a>
 							</td>
 						</tr>
 
@@ -316,7 +312,7 @@
 							</td>
 
 							<td>
-								<div class="clipboard_icon" data-toggle="popover" data-placement="left" data-content="https://s3.amazonaws.com/net-zero/2015-data-files/Instr.csv"><i class="fa fa-clipboard fa-2x" aria-hidden="true" id="Instr"></i></div>
+								<a tabindex="0" class="clipboard_icon" role="button" data-toggle="popover" data-placement="left" data-trigger="focus" data-content="https://s3.amazonaws.com/net-zero/2015-data-files/Instr.csv"><i class="fa fa-clipboard fa-2x" aria-hidden="true"></i></a>
 							</td>
 						</tr>
 
@@ -328,7 +324,7 @@
 							</td>
 
 							<td>
-								<div class="clipboard_icon" data-toggle="popover" data-placement="left" data-content="https://s3.amazonaws.com/net-zero/2015-data-files/All-Subsystems.csv"><i class="fa fa-clipboard fa-2x" aria-hidden="true" id="All-Subsystems"></i></div>
+								<a tabindex="0" class="clipboard_icon" role="button" data-toggle="popover" data-placement="left" data-trigger="focus" data-content="https://s3.amazonaws.com/net-zero/2015-data-files/All-Subsystems"><i class="fa fa-clipboard fa-2x" aria-hidden="true"></i></a>
 							</td>
 						</tr>
 
@@ -341,13 +337,13 @@
 	    		<h2>Data Dictionary</h2>
 				
 				<div class="row">
-					<div class="col-xs-4">
+					<div class="hidden-xs col-md-4 col-lg-4">
 		    			<a href="https://s3.amazonaws.com/net-zero/NZERTF-Data-Dictionary.docx"><img src="./img/NIST-LEED.jpeg"></a>
 					</div>
 
 <!-- 					Photo is credited to : http://www.everydaygreendc.com/wp-content/uploads/2012/11/NIST-LEED-Homes-Platinum.jpeg
  -->
-					<div class="col-xs-6">
+					<div class="col-xs-12 col-md-8 col-lg-8">
 			    		<p>In 2012, the National Institute of Standards and Technology (NIST) completed construction of the Net-Zero Energy Residential Test Facility, a testbed designed as a single family house to develop measurement science for assessing equipment and strategies for achieving energy efficient homes with good indoor environmental quality (Pettit et al. 2014).  After extensive instrumentation and planning, NIST began a one-year test period on July 1, 2013 to assess whether the building could achieve net-zero operation, meaning that the amount of energy consumed by the home over the course of a year would be less than that generated by the photovoltaic (PV) system located on the roof of the facility.  The house was operated in an all-electric configuration with a simulated family of four that carried out all activities that would be expected in a typical American household.</p>
 						
 						<p>NIST, in conjunction with the U.S. Department of Commerce Data Service, is making available data from the operation of the facility during these test phases.  The purpose of this document is to describe the configuration of the house along with the contents of each data channel that is reported.</p>
@@ -364,7 +360,7 @@
 	    		<h2>Log of Revisions</h2>
 	    		<h4>(Updated on 07/26/2016</h4>
 
-	    		<table id="log_revisions_table">
+	    		<table class="table table-striped" id="log_revisions_table" >
 	    			
 	    			<tr>
 		    			<th>Date</th>
